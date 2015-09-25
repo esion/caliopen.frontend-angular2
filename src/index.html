@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Caliopen</title>
+    <script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.91/traceur-runtime.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
+    <script>
+      System.config({
+        defaultJSExtensions: true
+      });
+    </script>
+    <script src="js/vendor.js"></script>
+  </head>
+  <body>
+    <caliopen-app></caliopen-app>
+    <script>
+      System.import('app/bootstrap');
+    </script>
+  </body>
+</html>
