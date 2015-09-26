@@ -4,7 +4,7 @@ var ts = require('gulp-typescript');
 var server = require('gulp-express');
 
 var config = {
-    tsApp: 'src/**/*.ts',
+    tsApp: 'app/**/*.ts',
     jsAppFilename: 'app.js',
     tsAppOutput: 'public/app',
 
@@ -15,7 +15,7 @@ var config = {
     jsVendorFilename: 'vendor.js',
     jsOutput: 'public/js',
 
-    index: 'src/index.html',
+    index: 'app/index.html',
     indexOutput: 'public',
 
     // lessFile: 'less/main.less',
@@ -50,7 +50,7 @@ gulp.task('build:app', function() {
 });
 
 gulp.task('build:watch', function() {
-    gulp.watch('src/*.ts', ['build:app']);
+    gulp.watch('app/*.ts', ['build:app']);
 });
 
 // Build styles

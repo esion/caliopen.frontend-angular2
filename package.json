@@ -2,7 +2,6 @@
   "name": "caliopen.frontent",
   "version": "0.1.0",
   "description": "web client for caliopen",
-  "main": "public/app.js",
   "scripts": {
     "start": "gulp && gulp serve",
     "gulp": "gulp",
