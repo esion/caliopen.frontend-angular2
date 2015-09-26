@@ -1,0 +1,18 @@
+.co-contact-list__item {
+  border-bottom: 1px solid $body-bg;
+  padding: 10px 0;
+
+  a {
+    color: $caliopen-color-1;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.co-contact-list__item:first-child {
+  border-top: 1px solid $body-bg;
+}
+
+.co-contact-list__card-icons {
+  margin-top: 10px;
+}

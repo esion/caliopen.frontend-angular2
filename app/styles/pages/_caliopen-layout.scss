@@ -1,0 +1,134 @@
+// Layout component
+// ================
+//
+// This is the style for the application layout.
+
+$header-height:     60px;
+
+$topbar-height:     60px;
+$leftbar-width:     60px;
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/Open_Sans/opensans-regular-webfont.eot');
+  src: url('../fonts/Open_Sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Open_Sans/opensans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/Open_Sans/opensans-regular-webfont.woff') format('woff'),
+       url('../fonts/Open_Sans/opensans-regular-webfont.svg#open_sansregular') format('svg'),
+       url('../fonts/Open_Sans/opensans-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.caliopen-layout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.caliopen-layout__header {
+}
+  .caliopen-layout__header__navbar-img--brand {
+    height: $line-height-computed;
+  }
+
+// Main container. This is not scrollable and takes the whole viewport
+.caliopen-layout__main-container {
+  position: relative;
+  box-sizing: border-box;
+
+  // This is required for the top bar not to cover the body
+  // See http://getbootstrap.com/components/#navbar-fixed-top
+  padding-top: $header-height;
+
+  height: 100%;
+  width: 100%;
+}
+
+  .caliopen-layout__block--importance {
+    margin-top: 30px;
+
+    & .noUi-vertical {
+      height: calc( 100vh - #{$header-height} - 50px - #{$topbar-height} );
+      margin: auto;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .caliopen-layout__block--importance {
+      width: 4%;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .caliopen-layout__block--container {
+      width: 96%;
+    }
+  }
+
+  .caliopen-layout__tabs {
+    background-color: $body-bg;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 22px;
+  }
+
+  .caliopen-layout__tabs:before,
+  .caliopen-layout__tabs:after {
+    content: " ";
+    display: table;
+  }
+  .caliopen-layout__tabs:after {
+    clear: both;
+  }
+
+    .caliopen-layout__tabs__item {
+      float: left;
+      margin-bottom: -1px;
+      position: relative;
+      display: block;
+    }
+
+
+      .caliopen-layout__tabs__item__link {
+        color: darken($caliopen-color-1, 50);
+        border-bottom: 4px solid $body-bg;
+        border-top: 4px solid $body-bg;
+        background-color: $caliopen-color-2;
+        margin-right: 2px;
+        position: relative;
+        display: block;
+        padding: 10px 30px 10px 15px;
+      }
+      .caliopen-layout__tabs__item__link--first {
+        padding: 10px 15px;
+      }
+      .caliopen-layout__tabs__item__link:hover,
+      .caliopen-layout__tabs__item__link:focus {
+        //reset bootstrap
+        text-decoration: none;
+        color: darken($caliopen-color-1, 30);
+      }
+
+      .caliopen-layout__tabs__item__link--active {
+        color: $caliopen-color-1;
+        border-bottom: 4px solid transparent;
+        border-top: 4px solid transparent;
+      }
+
+      .caliopen-layout__tabs__item__del-btn {
+        position: absolute;
+        right: 10px;
+        top: 14px;
+      }
+
+  .caliopen-layout__main-content {
+    background-color: $caliopen-color-2;
+    padding-top: 45px;
+  }
+
+.co-layout__privacy-slider, .co-layout__importance-slider {
+  margin: 10px;
+}

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var ts = require('gulp-typescript');
 var server = require('gulp-express');
+var sass = require('gulp-sass');
 
 var config = {
     tsApp: 'app/**/*.ts',
@@ -18,9 +19,11 @@ var config = {
     index: 'app/index.html',
     indexOutput: 'public',
 
-    // lessFile: 'less/main.less',
+    sassFile: 'app/styles/app.scss',
+    sassFiles: 'app/styles/**/*.scss',
     cssFilename: 'main.css',
-    cssOutput: 'public/css'
+    cssOutput: 'public/css',
+    assets: 'app/assets/**/*.*'
 };
 
 // Build JS Vendors
@@ -36,7 +39,7 @@ gulp.task('build:index', function() {
         .pipe(gulp.dest(config.indexOutput));
 });
 
-// Build Index
+// Build app
 gulp.task('build:app', function() {
     return gulp.src(config.tsApp)
         .pipe(ts({
@@ -49,16 +52,27 @@ gulp.task('build:app', function() {
         .pipe(gulp.dest(config.tsAppOutput));
 });
 
-gulp.task('build:watch', function() {
-    gulp.watch('app/*.ts', ['build:app']);
-});
-
 // Build styles
 gulp.task('build:styles', function() {
-    // return gulp.src(config.lessFile)
-    //     .pipe(less(config.cssFilename))
-    //     .pipe(gulp.dest(config.cssOutput));
+    return gulp.src(config.sassFile)
+        .pipe(sass(config.cssFilename).on('error', sass.logError))
+        .pipe(gulp.dest(config.cssOutput));
 });
+
+//build assets
+gulp.task('build:assets', function() {
+    return gulp.src(config.assets)
+        .pipe(gulp.dest(config.indexOutput));
+});
+
+//watches
+gulp.task('build:watch', function() {
+    gulp.watch('app/index.html', ['build:index']);
+    gulp.watch('app/*.ts', ['build:app']);
+    gulp.watch(config.sassFiles, ['build:styles']);
+    gulp.watch('app/assets/**/*.*', ['build:assets']);
+});
+
 
 // Server
 gulp.task('serve', function () {
@@ -66,7 +80,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('build', [
-    'build:index', 'build:app', 'build:js:vendors', 'build:styles'
+    'build:index', 'build:app', 'build:js:vendors', 'build:styles', 'build:assets'
 ]);
 
 gulp.task('default', ['build']);

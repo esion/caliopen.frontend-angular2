@@ -1,0 +1,19 @@
+// override settings
+$border-radius-base: 0px;
+$border-radius-small: 0px;
+$border-radius-large: 0px;
+$gray-base: $caliopen-color-1 !default;
+$brand-primary: $caliopen-color-4;
+$font-family-sans-serif: open_sansregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// dropdown
+$dropdown-link-hover-bg: lighten($caliopen-color-4, 5) !default;
+
+// navbar inverse
+$navbar-inverse-link-active-bg: $caliopen-color-3;
+$navbar-inverse-link-hover-bg: lighten($caliopen-color-4, 5);
+
+// components
+$component-active-bg: $caliopen-color-4 !default;
+
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

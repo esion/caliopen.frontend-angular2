@@ -1,0 +1,51 @@
+$co-threads-read-color: darken($caliopen-color-1, 40);
+$co-threads-unread-color: lighten($caliopen-color-2, 30);
+
+.caliopen-threads__thread {
+  height: 80px;
+  border-bottom: 1px solid $body-bg;
+  padding: 10px 0;
+
+  a {
+    color: $co-threads-read-color;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.caliopen-threads__thread:first-child {
+  border-top: 1px solid $body-bg;
+}
+
+.caliopen-threads__thread--unread {
+  background-color: $co-threads-unread-color;
+  color: $caliopen-color-1;
+  a {
+    color: $caliopen-color-1;
+  }
+
+  .contact-icon {
+    .circle {
+      border-color: $co-threads-unread-color;
+    }
+  }
+}
+
+  .caliopen-threads__thread__contacts {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .caliopen-threads__thread__message-summary {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .caliopen-threads__thread__nb-messages {
+    &.badge {
+      color: $co-threads-read-color;
+    }
+  }

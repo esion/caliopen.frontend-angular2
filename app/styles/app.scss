@@ -1,0 +1,24 @@
+//theme
+@import "theme-dark";
+
+// defaults
+$caliopen-color-1: #000000 !default; //foreground
+$caliopen-color-2: #cccccc !default; //background
+$caliopen-color-3: #337ab7 !default; //active
+$caliopen-color-4: #f5f5f5 !default; //hover
+$caliopen-color-5: #97b707 !default; //privacy
+
+$body-color: $caliopen-color-1;
+$importance-color: #d2bc00;
+$privacy-color: $caliopen-color-5;
+
+@import "bootstrap";
+
+@import "pages/caliopen-layout";
+@import "pages/cor-login";
+@import "pages/caliopen-threads";
+@import "pages/caliopen-messages";
+@import "pages/caliopen-contacts";
+@import "components/contact";
+@import "components/letters";
+@import "components/slider";

@@ -8,7 +8,8 @@
     "dev": "gulp build watch"
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.37"
+    "angular2": "^2.0.0-alpha.37",
+    "bootstrap-sass": "^3.3.5"
   },
   "devDependencies": {
     "express": "^4.8.5",
@@ -16,6 +17,7 @@
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-express": "^0.3.5",
+    "gulp-sass": "^2.0.4",
     "gulp-typescript": "^2.9.0",
     "http-proxy": "^1.8.1",
     "lodash": "^3.7.0",

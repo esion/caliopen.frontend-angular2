@@ -1,0 +1,37 @@
+/**
+ * cor-login related style
+ */
+
+.cor-login {
+  position: absolute;
+  margin-top: -150px;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.cor-login__form {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+  .cor-login__form-title {
+  }
+
+  .cor-login__form-row {
+  }
+
+    .cor-login__form-label {
+      display: block;
+      width: 100%;
+    }
+
+    .cor-login__form-input {
+      display: block;
+      width: 100%;
+    }
+
+    .cor-login__form-submit {
+    }
+

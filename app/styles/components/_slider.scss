@@ -1,0 +1,92 @@
+@mixin co-slider($color, $direction) {
+  $co-slider-width: 10px;
+  $co-strip-size: 2px;
+
+  .noUi-vertical {
+    width: $co-slider-width;
+  }
+
+  .noUi-horizontal {
+    height: $co-slider-width;
+  }
+
+  .noUi-background {
+    background: none;
+    box-shadow: none;
+  }
+
+  .noUi-target {
+    background: none;
+    border: none;
+    border-radius: $co-slider-width;
+    box-shadow: none;
+
+    background:
+      linear-gradient(
+        to $direction,
+        darken($color, 30),
+        lighten($color, 1)
+      );
+    box-shadow: none;
+  }
+
+  .noUi-base {
+    border-radius: $co-slider-width;
+    @include gradient-striped(darken($color, 20));
+    background-size: 3px 3px;
+
+    .noUi-background {
+      @include gradient-striped(darken($color, 20));
+      background-size: 3px 3px;
+      border-radius: $co-slider-width;
+    }
+
+  }
+
+  .noUi-connect {
+    background: none;
+    background-image: linear-gradient(
+      to $direction,
+      darken($color, 30),
+      lighten($color, 1)
+    );
+    box-shadow: none;
+  }
+}
+
+.caliopen-layout__block--importance {
+  @include co-slider($importance-color, top);
+}
+
+.caliopen-layout__main-topbar__block--privacy {
+  @include co-slider($privacy-color, left);
+}
+
+.caliopen-layout {
+  .noUi-handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 0 20px 20px 20px;
+    background-color: white;
+    left: -5px;
+    top: -5px;
+  }
+  .noUi-handle:before,.noUi-handle:after {
+    content: none;
+    display: none;
+  }
+
+  .noUi-vertical .noUi-handle-upper {
+    transform: rotateZ(45deg);
+  }
+  .noUi-vertical .noUi-handle-lower {
+    transform: rotateZ(-135deg);
+  }
+  .noUi-horizontal .noUi-handle-upper {
+    transform: rotateZ(-45deg);
+  }
+
+  .noUi-horizontal .noUi-handle-lower {
+    transform: rotateZ(135deg);
+  }
+}
