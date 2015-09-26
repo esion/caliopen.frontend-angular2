@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var ts = require('gulp-typescript');
-var connect = require('gulp-connect');
+var server = require('gulp-express');
 
 var config = {
     tsApp: 'src/**/*.ts',
@@ -20,14 +20,8 @@ var config = {
 
     // lessFile: 'less/main.less',
     cssFilename: 'main.css',
-    cssOutput: 'public/css',
-    serverConfig: {
-
-    }
+    cssOutput: 'public/css'
 };
-
-
-
 
 // Build JS Vendors
 gulp.task('build:js:vendors', function() {
@@ -52,22 +46,11 @@ gulp.task('build:app', function() {
             experimentalDecorators: true,
             emitDecoratorMetadata: true
         }))
-        .pipe(gulp.dest(config.tsAppOutput))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(config.tsAppOutput));
 });
 
 gulp.task('build:watch', function() {
     gulp.watch('src/*.ts', ['build:app']);
-    // return gulp.src(config.tsApp)
-    //     .pipe(ts({
-    //         watch: true,
-    //         noImplicitAny: true,
-    //         module: 'commonjs',
-    //         target: 'ES5',
-    //         experimentalDecorators: true,
-    //         emitDecoratorMetadata: true
-    //     }))
-    //     .pipe(gulp.dest(config.tsAppOutput));
 });
 
 // Build styles
@@ -78,23 +61,8 @@ gulp.task('build:styles', function() {
 });
 
 // Server
-gulp.task('serve', function() {
-    connect.server({
-        root: config.indexOutput,
-        port: 4200,
-        livereload: true
-        // middleware: function() {
-        //     return [
-        //         (function() {
-        //             var url = require('url');
-        //             var proxy = require('proxy-middleware');
-        //             var options = url.parse(config.serverConfig.server);
-        //             options.route = '/back';
-        //             return proxy(options);
-        //         })()
-        //     ];
-        // }
-    });
+gulp.task('serve', function () {
+    server.run(['server/index.js']);
 });
 
 gulp.task('build', [

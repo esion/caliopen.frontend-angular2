@@ -17,6 +17,17 @@ npm start
 
 ## contribute
 
-Since angular2 still in alpha, no contributions is attended. This is a POC. Please take a look at  [caliopen.frontend][1].
+Since angular2 still in alpha, no contribution is expected. This is a POC. Please take a look at  [caliopen.frontend][1].
+
+
+
+
+
+
+Really you want to play with it ? try following and go hack:
+
+~~~
+npm run dev
+~~~
 
 [1]: https://github.com/...

@@ -1,0 +1,22 @@
+module.exports = [
+  {importance: 50, privacy: 10, 'thread_id': 1,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'first thread - last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 30, privacy: 40, 'thread_id': 2,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'no contacts', 'slug': null, 'tags': []},
+  {importance: 30, privacy: 90, 'thread_id': 3,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 20, privacy: 20, 'thread_id': 4,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 70, privacy: 60, 'thread_id': 5,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 70, privacy: 50, 'thread_id': 6,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 80, privacy: 60, 'thread_id': 7,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 90, privacy: 90, 'thread_id': 9,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 30, privacy: 50, 'thread_id': 10, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': '1 contact and a missing ', 'slug': null, 'tags': []},
+  {importance: 20, privacy: 50, 'thread_id': 11,  'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 10, privacy: 50, 'thread_id': 12, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 60, privacy: 40, 'thread_id': 13, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 14, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 15, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 30, 'thread_id': 16, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 17, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 18, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 19, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 20, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'last shortened messages from thread', 'slug': null, 'tags': []},
+  {importance: 50, privacy: 50, 'thread_id': 21, 'date_insert': '2012-01-02', 'date_update': '2012-01-03', 'security_level': 20, 'subject': 'latestt thread - last shortened messages from thread', 'slug': null, 'tags': []}
+];
