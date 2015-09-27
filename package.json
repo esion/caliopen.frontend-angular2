@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "angular2": "^2.0.0-alpha.37",
-    "bootstrap-sass": "^3.3.5"
+    "bootstrap-sass": "^3.3.5",
+    "font-awesome": "^4.4.0",
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
     "express": "^4.8.5",

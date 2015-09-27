@@ -13,6 +13,7 @@ $importance-color: #d2bc00;
 $privacy-color: $caliopen-color-5;
 
 @import "bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
 
 @import "pages/caliopen-layout";
 @import "pages/cor-login";

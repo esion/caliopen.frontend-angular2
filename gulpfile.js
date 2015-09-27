@@ -11,7 +11,9 @@ var config = {
 
     jsVendors: [
         'node_modules/angular2/bundles/angular2.dev.js',
-        'node_modules/angular2/bundles/router.dev.js'
+        'node_modules/angular2/bundles/router.dev.js',
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
     ],
     jsVendorFilename: 'vendor.js',
     jsOutput: 'public/js',
@@ -23,7 +25,13 @@ var config = {
     sassFiles: 'app/styles/**/*.scss',
     cssFilename: 'main.css',
     cssOutput: 'public/css',
-    assets: 'app/assets/**/*.*'
+    fonts: [
+      'app/assets/fonts/**/*.*',
+      'node_modules/font-awesome/fonts/*.*'
+    ],
+    images: [
+      'app/assets/images/**/*.*'
+    ]
 };
 
 // Build JS Vendors
@@ -60,15 +68,19 @@ gulp.task('build:styles', function() {
 });
 
 //build assets
-gulp.task('build:assets', function() {
-    return gulp.src(config.assets)
-        .pipe(gulp.dest(config.indexOutput));
+gulp.task('build:fonts', function() {
+    return gulp.src(config.fonts)
+        .pipe(gulp.dest(config.indexOutput + '/fonts'));
+});
+gulp.task('build:images', function() {
+    return gulp.src(config.images)
+        .pipe(gulp.dest(config.indexOutput + '/images'));
 });
 
 //watches
 gulp.task('build:watch', function() {
     gulp.watch('app/index.html', ['build:index']);
-    gulp.watch('app/*.ts', ['build:app']);
+    gulp.watch('app/**/*.ts', ['build:app']);
     gulp.watch(config.sassFiles, ['build:styles']);
     gulp.watch('app/assets/**/*.*', ['build:assets']);
 });
@@ -80,7 +92,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('build', [
-    'build:index', 'build:app', 'build:js:vendors', 'build:styles', 'build:assets'
+    'build:index', 'build:app', 'build:js:vendors', 'build:styles', 'build:fonts', 'build:images'
 ]);
 
 gulp.task('default', ['build']);
