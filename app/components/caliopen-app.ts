@@ -1,5 +1,6 @@
 import {Component, View, NgIf} from 'angular2/angular2';
 import { ApplicationSwitcherComponent } from './co-layout/application-switcher';
+import { ApplicationWrapperComponent } from './co-layout/application-wrapper';
 import { UserMenuComponent } from './co-layout/user-menu';
 
 // Annotation section
@@ -7,7 +8,7 @@ import { UserMenuComponent } from './co-layout/user-menu';
   selector: 'caliopen-app'
 })
 @View({
-  directives: [NgIf, ApplicationSwitcherComponent, UserMenuComponent],
+  directives: [NgIf, ApplicationSwitcherComponent, UserMenuComponent, ApplicationWrapperComponent],
   template: `
 <header class="caliopen-layout__header">
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -44,7 +45,7 @@ import { UserMenuComponent } from './co-layout/user-menu';
 </header>
 
 <section role="main" class="container-fluid caliopen-layout__main-container">
-  {{yield}}
+  <co-layout-application-wrapper></co-layout-application-wrapper>
 </section>
 `
 })

@@ -13,7 +13,8 @@ var config = {
         'node_modules/angular2/bundles/angular2.dev.js',
         'node_modules/angular2/bundles/router.dev.js',
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
+        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+        'node_modules/noiuslider/distribute/nouislider.js'
     ],
     jsVendorFilename: 'vendor.js',
     jsOutput: 'public/js',
