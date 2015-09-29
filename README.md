@@ -1,5 +1,10 @@
 # Caliopen POC Angular 2
 
+A basic list of thread is loaded from mock server. That's all for now
+
+![screenshot](./caliopen_angular2.png)
+
+
 Follow angular 2 doc : https://angular.io/docs/js/latest/quickstart.html
 
 ## install
